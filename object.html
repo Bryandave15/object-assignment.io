@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Assignment</title>
+
+
+   <style>
+    .container{
+        text-align: center;
+        background-color: aliceblue;
+    }
+   </style> 
+</head>
+<body>
+    <div class="container">
+        <h1>Description of Object</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p2.5"></p>
+        <p id="p2.7"></p>
+        <p id="p3"></p>
+        <h3 id="p4"></h3>
+        <p id="p5"></p>
+        <table>
+            <tr>
+                <td id="p7"></td>
+                <td id="p8"></td>
+            </tr>
+        </table>
+        <p id="p7"></p>
+        <h2></h2>
+        <h2></h2>
+        <h3></h3>
+
+
+    </div>
+    
+
+
+
+    <script>
+        var person = new Object()
+
+        person.firstName = "Bryan Dave"
+        person["lastName"] = "Aguilar"
+        person.birthday = "February 15, 1997"
+        person.age = 26;
+        person.adress = "Santa Praxedes Cagayan"
+        person.getFullName = function () {
+            return this.firstName +" "+ this.lastName ;
+        };
+
+       
+
+        document.getElementById("p1").innerHTML = "First Name: " + person.firstName;
+        document.getElementById("p2").innerHTML ="Last Name : "+ person.lastName;
+        document.getElementById("p2.5").innerHTML ="Birthday: "+ person.birthday;
+        document.getElementById("p2.7").innerHTML = "Adress: " + person.adress
+
+        document.getElementById("p3").innerHTML = "Age: " +person.age;
+        document.getElementById("p4").innerHTML = person["lastName"];
+
+        //document.getElementById("p5").innerHTML = person.getFullName();
+
+        document.getElementsByTagName("h3")[0].innerHTML = "My name is" + " " + person.firstName + " " + person.lastName+ " from "+ person.adress + " and I am " + person.age + " years old.";
+
+       
+
+
+    </script>
+    
+</body>
+</html>
